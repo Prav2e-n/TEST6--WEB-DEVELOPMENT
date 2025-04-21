@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager UI</title>
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          background:lightcyan;
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 40px;
+          color: #333;
+          
+        }
+        .card {
+      background: white;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      padding: 20px;
+      width: 320px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .tasks {
+      margin-top: 20px;
+    }
+
+    .task {
+      background: #f5f5f5;
+      border-radius: 12px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .task .progress {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .progress.red { color: red; }
+    .progress.green { color: green; }
+    .progress.orange { color: orange; }
+                                  
+    .button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    input, textarea, .priority-button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between; 
+    }
+    .actions button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      margin: 0 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+
+
+    
+    .priority-button.high { background-color: #ff4d4d; }
+    .priority-button.medium { background-color: #fbb034; }
+    .priority-button.low { background-color: #4caf50; }
+
+
+
+
+</style>    
+</head>
+<body>
+    <div class="card">
+        <div class="profile">
+          <img src="charlie.jpg" alt="Profile">
+          <div>
+            <strong>Hello, <span style="color: tomato;">Damian</span></strong><br/>
+            <small>Manage your tasks!</small>
+          </div>        
+        </div>
+
+        <div class="tasks">
+            <div class="task"><span>UI/UX App Design</span><span class="progress red">75%</span></div>
+            <div class="task"><span>Football Cup Training</span><span class="progress green">75%</span></div>
+            <div class="task"><span>Resume Review</span><span class="progress orange">75%</span></div>
+          </div>
+      
+          <button class="button">Create task</button>
+        </div>
+
+        <div class="card">
+            <h3>Create new task</h3>
+            <input type="text" placeholder="Main task name" value="UI/UX App Design">
+            <input type="datetime-local" value="2023-04-29T00:30">
+            <div class="priority">
+              <button class="priority-button high">High</button>
+              <button class="priority-button medium">Medium</button>
+              <button class="priority-button low">Low</button>
+            </div>
+            <input type="text" placeholder="Sub-task name" value="Prototyping">
+            <input type="text" placeholder="Sub-task name" value="Animate the logo">
+            <textarea rows="3">First I have to animate the logo and later prototyping my design. It’s very important.</textarea>
+            <div class="actions">
+              <button class="add-btn">Add task</button>
+              <button class="clear-btn">Clear</button>
+            </div>
+          </div>
+    
+</body>
+</html>
